@@ -1,6 +1,6 @@
-import { Global, Module } from '@nestjs/common'
-import { PrismaService } from './prisma.service'
-import { ConfigService } from '@nestjs/config'
+import { Global, Module } from "@nestjs/common";
+import { PrismaService } from "./prisma.service";
+import { ConfigService } from "@nestjs/config";
 
 @Global()
 @Module({
@@ -8,8 +8,8 @@ import { ConfigService } from '@nestjs/config'
     {
       provide: PrismaService,
       useFactory: (configService: ConfigService) => {
-        const prisma = new PrismaService(configService)
-        return prisma
+        const prisma = new PrismaService(configService);
+        return prisma;
       },
       inject: [ConfigService],
     },

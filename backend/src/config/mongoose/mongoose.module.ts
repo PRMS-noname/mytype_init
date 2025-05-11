@@ -1,6 +1,6 @@
-import { Global, Module } from '@nestjs/common'
-import { MongooseService } from './mongoose.service'
-import { ConfigService } from '@nestjs/config'
+import { Global, Module } from "@nestjs/common";
+import { MongooseService } from "./mongoose.service";
+import { ConfigService } from "@nestjs/config";
 
 @Global()
 @Module({
@@ -8,7 +8,7 @@ import { ConfigService } from '@nestjs/config'
     {
       provide: MongooseService,
       useFactory: (configService: ConfigService) => {
-        return new MongooseService(configService)
+        return new MongooseService(configService);
       },
       inject: [ConfigService],
     },
