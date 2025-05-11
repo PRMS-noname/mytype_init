@@ -17,7 +17,7 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
-    "typeRoots": ["./node_modules/@types", "./node_modules/@nestjs"],
+    "typeRoots": ["./node_modules/@types"],
     "paths": {
       "@/*": ["src/*"],
       "@config/*": ["src/config/*"],
@@ -26,5 +26,7 @@
       "@interfaces/*": ["src/interfaces/*"],
       "@utils/*": ["src/utils/*"]
     }
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
