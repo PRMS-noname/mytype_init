@@ -8,7 +8,7 @@ import { ConfigService } from '@nestjs/config'
     {
       provide: PrismaService,
       useFactory: (configService: ConfigService) => {
-        const prisma = new PrismaService()
+        const prisma = new PrismaService(configService)
         return prisma
       },
       inject: [ConfigService],

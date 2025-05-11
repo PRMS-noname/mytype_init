@@ -1,19 +1,18 @@
 import { Global, Module } from '@nestjs/common'
-import { MongooseModule } from '@nestjs/mongoose'
+import { MongooseService } from './mongoose.service'
 import { ConfigService } from '@nestjs/config'
 
 @Global()
 @Module({
-  imports: [
-    MongooseModule.forRootAsync({
-      useFactory: async (configService: ConfigService) => ({
-        uri: configService.get<string>('MONGODB_URI'),
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      }),
+  providers: [
+    {
+      provide: MongooseService,
+      useFactory: (configService: ConfigService) => {
+        return new MongooseService(configService)
+      },
       inject: [ConfigService],
-    }),
+    },
   ],
-  exports: [MongooseModule],
+  exports: [MongooseService],
 })
 export class MongooseConfigModule {}
