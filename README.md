@@ -1,0 +1,1 @@
+# mytype_init
