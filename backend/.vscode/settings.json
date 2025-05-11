@@ -1,0 +1,24 @@
+{
+  "editor.tabSize": 2,
+  "editor.fontFamily": "'Fira Code', Consolas",
+  "workbench.tree.indent": 4,
+  "workbench.colorTheme": "Dracula Theme Soft",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.cursorStyle": "line-thin",
+  "editor.cursorBlinking": "blink",
+  "vim.disableExtension": true,
+  "vim.useCtrlKeys": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors": {
+    "normal": "#ffa500",
+    "insert": "#00ff00",
+    "visual": "#ff00ff"
+  },
+  "html.format.wrapAttributesIndentSize": 2,
+  "editor.hover.enabled": true,
+  "editor.hover.above": true
+}
